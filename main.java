@@ -335,7 +335,8 @@ public class main extends JFrame {
 
         // PLACE ORDER
         btnPlace.addActionListener(e -> {
-            receiptArea.append("\n\nOrder Completed. Thank you!");
+            receiptArea.append("\n\nBalik kana po please");
         });
     }
+
 }
