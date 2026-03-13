@@ -298,8 +298,9 @@ public class main extends JFrame {
                 receiptArea = new JTextArea();
                 scrollPane.setViewportView(receiptArea);
                 receiptArea.setEditable(false);
-
-
+                
+             // Enable or disable the Product quantity field based on check box selection.
+             // If the check box is unchecked, clear the text field.
                 chkEspresso.addActionListener(e -> {
                     txtEspresso.setEditable(chkEspresso.isSelected());
                     if(!chkEspresso.isSelected()) txtEspresso.setText("");
@@ -554,7 +555,7 @@ public class main extends JFrame {
                         subtotal += itemTotal;
                         receipt += "Ice Cream x"+qty+" = "+itemTotal+"\n";
                     }
-
+                    
                     double discount = 0;
                     String discountType = "None";
 
@@ -619,8 +620,7 @@ public class main extends JFrame {
 
         // PLACE ORDER
         btnPlace.addActionListener(e -> {
-            receiptArea.append("\n\nBalik kana po please");
+            receiptArea.append("\n\nOrder Completed. Thank you!");
         });
     }
 }
-
